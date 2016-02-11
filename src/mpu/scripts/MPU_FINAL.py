@@ -18,7 +18,7 @@ accel_scale = 16384.0
 # only one MPU will have this address
 rospy.init_node("MPU")
 pub_left_leg = rospy.Publisher("left_leg_angle", Float32, queue_size=10)  # publishes angles message
-pub_right_leg = rospy.Publisher("right_leg_angle", Float32, queue_size=10)  # publishes angles message
+pub_left_thigh = rospy.Publisher("right_thigh_angle", Float32, queue_size=10)  # publishes angles message
 rate = rospy.Rate(50)  # four times the normal rate due to four MPUs
 
 # Global variable for indicating the current MPU
@@ -78,7 +78,7 @@ class MPU:
 
 
 MPU_leg_left = MPU()
-MPU_leg_right = MPU(address=0x69)
+MPU_thigh_left = MPU(address=0x69)
 
 
 def get_leg_left_data():
@@ -123,14 +123,14 @@ def get_leg_left_data():
     pub_left_leg.publish(rotation_x)
 
 
-def get_leg_right_data():
+def get_thigh_left_data():
     K = 0.98  # Complementary filter gain
     K1 = 1 - K
     global last_x
     global last_y
     global last_z
     (gyro_scaled_x, gyro_scaled_y, gyro_scaled_z, accel_scaled_x, accel_scaled_y,
-     accel_scaled_z) = MPU_leg_right.read_all()
+     accel_scaled_z) = MPU_thigh_left.read_all()
     last_x = get_x_rotation(accel_scaled_x, accel_scaled_y, accel_scaled_z)
     last_y = get_y_rotation(accel_scaled_x, accel_scaled_y, accel_scaled_z)
     last_z = get_z_rotation(accel_scaled_x, accel_scaled_y, accel_scaled_z)
@@ -161,14 +161,14 @@ def get_leg_right_data():
     gyro_total_y += gyro_y_delta
     gyro_total_z += gyro_z_delta
     rotation_x = get_x_rotation(accel_scaled_x, accel_scaled_y, accel_scaled_z)
-    print("right leg", rotation_x)
-    pub_right_leg.publish(rotation_x)
+    print("left thigh", rotation_x)
+    pub_left_thigh.publish(rotation_x)
 
 
 def getData():
     while not rospy.is_shutdown():
         get_leg_left_data()
-        get_leg_right_data()
+        get_thigh_left_data()
         rate.sleep()
 
 
