@@ -1,0 +1,22 @@
+This library makes it easier to get the readings from two MPUs at once.
+
+1- First make an MPU object:
+Ex:
+MPU mpu1(1); // 1 for 0x68 address
+MPU mpu2(2); // 2 for 0x69 address
+    
+2- Setup the mpu in the "void setup()":
+Ex:
+mpu1.setup();
+
+3- calculate the angles in the "void loop()":
+Ex: calculateAngles();
+
+4- get the desired angle:
+note: the datatype is double
+EX:
+mpu1.getX(); //for x angle
+mpu1.getY(); //for y angle
+mpu1.getZ(); //for z angle
+
+//you can get the readings from the other object as well
