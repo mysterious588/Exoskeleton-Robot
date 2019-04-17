@@ -1,4 +1,4 @@
-# MPU Interfacing with Rasberry Pi
+# MPU Interfacing with Raspberry Pi
 Simple code to interface with MPU using Raspberry Pi.
 
 ## Requirements
