@@ -62,9 +62,9 @@ def accel():
     y = MPU_data_read(ACCEL_Y)
     z = MPU_data_read(ACCEL_Z)
 
-    Ax = (x/16384.0-AxCal)
-    Ay = (y/16384.0-AyCal)
-    Az = (z/16384.0-AzCal)
+    Ax = x/16384.0
+    Ay = y/16384.0
+    Az = z/16384.0
 
     print(Ax, " - ", Ay, " - ", Az)
     time.sleep(.01)
@@ -79,9 +79,9 @@ def gyro():
     y = MPU_data_read(GYRO_Y)
     z = MPU_data_read(GYRO_Z)
 
-    Gx = x/131.0 - GxCal
-    Gy = y/131.0 - GyCal
-    Gz = z/131.0 - GzCal
+    Gx = x/131.0
+    Gy = y/131.0
+    Gz = z/131.0
 
     print(Gx, " - ", Gy, " - ", Gz)
     time.sleep(.01)
