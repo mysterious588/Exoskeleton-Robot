@@ -10,14 +10,14 @@ this is the first time to interface with raspberry pi so we need to config the r
 ### Step 1: Enable I2C Communication
 First we gonna open a terminal and type : <br >
 ```sudo raspi-config``` <br >
-this gonna appear
+this gonna appear <br >
 ![ScreenShots](ScreenShots/1.png "Config")
 
 then we need to enable I2C from last page we gonna choose <br > 
-```Interfacing Options```
+```Interfacing Options``` <br >
 ![ScreenShots](ScreenShots/2.png "Enable I2C")
 
-we gonna choose P5 I2C and choose ```YES``` in this one:
+we gonna choose P5 I2C and choose ```YES``` in this one: <br >
 ![ScreenShots](ScreenShots/3.png "Enable I2C")
 
 ### Step2: install pip and GPIO lib
