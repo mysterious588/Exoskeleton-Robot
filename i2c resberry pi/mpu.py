@@ -1,4 +1,4 @@
-import RPI.GPIO as gpio #import GPIO package to control GPIO on a Rasberry pi
+import RPi.GPIO as gpio #import GPIO package to control GPIO on a Rasberry pi
 import smbus  #import SMBus module of I2C
 from time import sleep #import this module to define sleep == delay
 
@@ -35,7 +35,7 @@ def MPU_Init():
     bus.write_byte_data(device_address, GYRO_CONFIG, 24)
     #write to interrupt enable register
     bus.write_byte_data(device_address, INT_EN, 1)
-    time.sleep(1)
+    sleep(1)
 
 def MPU_data_read(address):
     #Accelero and Gyro value are 16-bit
@@ -65,9 +65,10 @@ def accel():
     Ax = x/16384.0
     Ay = y/16384.0
     Az = z/16384.0
-
+    
+    print("Ax - Ay - Az")
     print(Ax, " - ", Ay, " - ", Az)
-    time.sleep(.01)
+    sleep(.01)
 
 """""""""""""""""""""
 " @breif      : reading the Gyroscope value
@@ -83,8 +84,9 @@ def gyro():
     Gy = y/131.0
     Gz = z/131.0
 
+    print("Gx - Gy - Gz")
     print(Gx, " - ", Gy, " - ", Gz)
-    time.sleep(.01)
+    sleep(.01)
 
 MPU_Init()
 
