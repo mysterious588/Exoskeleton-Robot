@@ -8,8 +8,17 @@ No dependencies, just `Python3`.
 this is the first time to interface with raspberry pi so we need to config the raspberry pi for MPU:
  
 ### Step 1: Enable I2C Communication
+First we gonna open a terminal and type : <br >
 ```sudo raspi-config``` <br >
-after enable we need to reboot our raspberry pi.
+this gonna appear
+![ScreenShots](/ScreenShot/1.png "Config")
+
+then we need to enable I2C from last page we gonna choose <br > 
+```Interfacing Options```
+![ScreenShots](/ScreenShots/2.png "Enable I2C")
+
+we gonna choose P5 I2C and choose ```YES``` in this one:
+![ScreenShots](/ScreenShots/3.png "Enable I2C")
 
 ### Step2: install pip and GPIO lib
 ```sudo apt install build-essential python-dev python-pip``` <br >
@@ -29,6 +38,3 @@ we need to install SMBus lib in raspberry pi so we gonna use this command: <br >
 
 ## License
 This project is licensed under the MIT License.
-
-## Tip
-i did not test this code yet and i'm gonna attach screenshots when i get the raspberry pi, thanks.
