@@ -14,6 +14,11 @@ git clone https://github.com/mysterious588/Exoskeleton-Robot
 ```bash
 catkin_make
 ```
+## prerequisites
+Some library has to be installed & enabling the I2C bus for the Raspberry Pi is necessary
+
+check our tutoral: https://github.com/mysterious588/Exoskeleton-Robot/tree/master/old%20libraries/i2c%20raspberry%20pi
+
 ## MPUs
 After installation you can run the MPU scripts
 Make sure you have the MPUs connected to your Raspberry pi
