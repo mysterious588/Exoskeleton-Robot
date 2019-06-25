@@ -26,12 +26,12 @@ SCL >> SCL
 
 SDA >> SDA
 
-Make sure you have you workspace sourced
+Make sure you have your workspace sourced
 ```bash
 source Exo_workspace/devel/setup.bash
 ```
 
-then run the following command
+Then run the following command
 
 ```bash
 rosrun mpu lower_left_mpu.py
