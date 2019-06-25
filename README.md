@@ -16,15 +16,27 @@ catkin_make
 ```
 ## MPUs
 After installation you can run the MPU scripts
-Make sure you have the MPU connected to your Raspberry pi
+Make sure you have the MPUs connected to your Raspberry pi
 
-Vcc >> 5v
+All of the MPUs will be connected the same way excpet the AD0 Pin which controls the address.
+
+The script pulls three MPUs' AD0 Pin high to make the address 0x69 & then reads the 0x68 address of the remaining MPU, This opens the door to use multiple MPUs in the same I2C bus.
+
+Vcc >> 5v or 3.3V (MPU6050 has a built in voltage regulator)
 
 Gnd >> Gnd
 
 SCL >> SCL
 
 SDA >> SDA
+
+Pin 21 >> Left Leg MPU
+
+Pin 22 >> Left Thigh MPU
+
+Pin 23 >> Right Leg MPU
+
+Pin 24 >> Right Thigh MPU
 
 Make sure you have your workspace sourced
 ```bash
@@ -34,5 +46,5 @@ source Exo_workspace/devel/setup.bash
 Then run the following command
 
 ```bash
-rosrun mpu lower_left_mpu.py
+rosrun mpu MPU.py
 ```
