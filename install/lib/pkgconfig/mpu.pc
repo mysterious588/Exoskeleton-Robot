@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/Desktop/Exo_workspace/install
+
+Name: mpu
+Description: Description of mpu
+Version: 0.0.0
+Cflags: -I/home/ubuntu/Desktop/Exo_workspace/install/include
+Libs: -L/home/ubuntu/Desktop/Exo_workspace/install/lib 
+Requires: message_runtime
