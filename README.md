@@ -14,7 +14,7 @@ git clone https://github.com/mysterious588/Exoskeleton-Robot
 ```bash
 catkin_make
 ```
-## Mpus
+## MPUs
 After installation you can run the mpu scripts
 Make sure you have the MPU Connected to your Raspberry pi
 
