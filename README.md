@@ -5,6 +5,7 @@ Exoskeleton is a wearable device that allows paraplegic patients to control thei
 1- Make sure you have ROS Kinetic installed in your device.
 
 Follow this link for instructions http://wiki.ros.org/kinetic/Installation
+
 2- clone the repository
 ```bash 
 git clone https://github.com/mysterious588/Exoskeleton-Robot
