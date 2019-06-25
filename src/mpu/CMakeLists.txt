@@ -107,7 +107,7 @@ catkin_package(
 #  LIBRARIES mpu
 #  CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
-   CATKIN_DEPENDS message_runtime
+   CATKIN_DEPENDS message_runtime std_msgs
 )
 
 ###########
@@ -189,7 +189,6 @@ include_directories(
 #############
 ## Testing ##
 #############
-
 ## Add gtest based cpp test target and link libraries
 # catkin_add_gtest(${PROJECT_NAME}-test test/test_mpu.cpp)
 # if(TARGET ${PROJECT_NAME}-test)

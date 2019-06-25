@@ -1,3 +1,4 @@
-int16 angleX
-int16 angleY
-int16 angleZ
+int32 left_leg_angle
+int32 left_thigh_angle
+int32 right_leg_angle
+int32 right_thigh_angle
