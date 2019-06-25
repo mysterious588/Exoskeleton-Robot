@@ -26,6 +26,11 @@ SCL >> SCL
 
 SDA >> SDA
 
+Make sure you have you workspace sourced
+```bash
+source Exo_workspace/devel/setup.bash
+```
+
 then run the following command
 
 ```bash
