@@ -64,7 +64,7 @@ def get_z_rotation(x, y, z):
     return math.degrees(radians)
 
 
-bus = smbus.SMBus(0)  # or bus = smbus.SMBus(1) for Revision 2 boards
+bus = smbus.SMBus(1)  # or bus = smbus.SMBus(1) for Revision 2 boards
 
 
 def getData():
