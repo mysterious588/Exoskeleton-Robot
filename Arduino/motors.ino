@@ -6,7 +6,7 @@ void setup() {
 }
 
 void loop() {
-  if (Serial.available() > 8)
+  if (Serial.available() >= 8)
     for (char i = 0; i < 8; i++)
       analogWrite(PINS[i], Serial.read());
 }
