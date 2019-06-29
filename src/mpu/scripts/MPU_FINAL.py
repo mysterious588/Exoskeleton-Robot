@@ -17,8 +17,8 @@ accel_scale = 16384.0
 # MPU6050's address when pin AD0 is pulled to ground
 # only one MPU will have this address
 rospy.init_node("MPU")
-pub_left_leg = rospy.Publisher("left_leg", Float32, queue_size=10)  # publishes angles message
-pub_right_leg = rospy.Publisher("right_leg", Float32, queue_size=10)  # publishes angles message
+pub_left_leg = rospy.Publisher("left_leg_angle", Float32, queue_size=10)  # publishes angles message
+pub_right_leg = rospy.Publisher("right_leg_angle", Float32, queue_size=10)  # publishes angles message
 rate = rospy.Rate(50)  # four times the normal rate due to four MPUs
 
 # Global variable for indicating the current MPU
