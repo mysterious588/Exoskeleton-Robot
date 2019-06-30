@@ -1,16 +1,21 @@
 #!/usr/bin/env python
 import serial
 import rospy
+from pid.msg import motors
+motors_publisher = rospy.Publisher("",)
+ser = serial.Serial('/dev/ttyACM1', 9600)
+arr = {1., 2., 5.}
 
-ser = serial.Serial('/dev/ttyACM0')
+int_encode = b'%d' % 5
 
-def start_node():
-    rospy.init_node('serial sender')
-    rospy.subscriber('PID', data_type, callback)
-    rospy.spin()
 
 def callback(data):
-    ser.write(data.encode())
+    while 1:
+        for i in range(8):
+            ser.write(b"%d" % i)
+            if (ser.in_waiting > 0):
+                print(ser.readline())
+
 
 if __name__ == '__main__':
-    start_node()
+    callback(arr)

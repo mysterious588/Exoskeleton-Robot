@@ -4,7 +4,7 @@ import smbus
 import math
 import time
 import rospy
-import RPi.GPIO as GPIO
+from RPi.gpio import GPIO #wrong, google the right one
 from std_msgs.msg import Float32
 from mpu.msg import angles  # custom made message for storing values
 
